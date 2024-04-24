@@ -20,7 +20,13 @@ class Player:
     
 # Define a class to manage the game
 
-
+class CardMemoryGame:
+    def __init__(self, players, max_points = 25, max_turns = 3):
+        self.players = players
+        self.max_points = max_points
+        self.max_turns = max_turns
+        self.deck = self.generate_deck()
+        self.turn_count = 0
 
 # Generate a standard deck with 13 cards in each of the four suits
 
