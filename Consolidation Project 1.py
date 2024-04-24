@@ -10,20 +10,34 @@ import time
 
 # Define a class to represent each player
 
+class Player:
+    def __init__(self, name):
+        self.name = name
+        self.points = 0
 
+    def __str__(self):
+        return self.name
+    
 # Define a class to manage the game
+
 
 
 # Generate a standard deck with 13 cards in each of the four suits
 
 
+
 # Define a method that shuffles the deck and deals five cards to each player
+
 
 
 # Define a method that plays a turn of the game
 
 
+
 # Define a method that starts the game and displays instructions
 
 
+
 # Set up of the game
+
+
