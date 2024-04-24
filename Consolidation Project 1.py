@@ -61,6 +61,7 @@ def start_game(self):
             print("Maximum turns reached. Game over.")
             break
         for player in self.players:
+            self.play_turn()
 
 # Set up of the game
 
