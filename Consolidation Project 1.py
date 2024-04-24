@@ -37,7 +37,9 @@ def generate_deck(self):
 
 # Define a method that shuffles the deck and deals five cards to each player
 
-
+def deal_cards(self):
+    random.shuffle(self.deck)
+    return self.deck[:5]
 
 # Define a method that plays a turn of the game
 
