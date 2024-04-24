@@ -43,7 +43,13 @@ def deal_cards(self):
 
 # Define a method that plays a turn of the game
 
-
+def play_turn(self):
+    self.turn_count += 1
+    print(f"\nTurn {self.turn_count} - Deal Cards:")
+    dealt_cards = self.deal_cards()
+    for card in dealt_cards:
+        print(card)
+        time.sleep(1)
 
 # Define a method that starts the game and displays instructions
 
