@@ -2,7 +2,10 @@
 
 # Card Memory Game
 
-# Define the amount of players in the game
+# Import module random to shuffle the deck
+# Import module time to add delays when showing cards
 
-# Generate a deck of cards
+import random
+import time
+
 
