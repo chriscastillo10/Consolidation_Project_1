@@ -54,7 +54,7 @@ class CardMemoryGame:
 # Define a method that starts the game and displays instructions
 
     def start_game(self):
-        print("\n Welcome to the Card Memory Game!")
+        print("Welcome to the Card Memory Game!")
         print(f"The game will continue until a player reaches {self.max_points} points or after {self.max_turns} turns.\n")
         
         while self.turn_count < self.max_turns:
@@ -64,7 +64,7 @@ class CardMemoryGame:
                     return
                 
                 self.play_turn()
-                self.check_winner()
+                self.check_for_winner()
 
         print("Maximum turns reached. Game Over.")
 
