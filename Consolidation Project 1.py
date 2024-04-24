@@ -64,3 +64,9 @@ def start_game(self):
 
 # Set up of the game
 
+            if __name__ == "__main__":
+                num_players = int(input("Enter the number of players: "))
+                players = [Player(input(f"Enter name of Player {i+1}: ")) for i in range(num_players)]
+
+                game = CardMemoryGame(players)
+                game.start_game()
