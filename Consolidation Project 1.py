@@ -30,7 +30,10 @@ class CardMemoryGame:
 
 # Generate a standard deck with 13 cards in each of the four suits
 
-
+def generate_deck(self):
+    suit = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+    rank = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
+    return [(suit, rank) for suit in suit for rank in rank]
 
 # Define a method that shuffles the deck and deals five cards to each player
 
