@@ -1,10 +1,10 @@
-# Consolidation Project 1
+# Final Project
 
 # Card Memory Game
 
 # Import module random to shuffle the deck
 # Import module time to add delays when showing cards
-
+import os
 import random
 import time
 
@@ -37,9 +37,17 @@ class CardMemoryGame:
 
 # Define a method that shuffles the deck and deals five cards to each player
 
-    def deal_cards(self):
+    def deal_cards(self):       
         random.shuffle(self.deck)
         return self.deck[:5]
+    
+# Generate a function that clears the terminal
+
+    def clear_terminal(self):
+        if os.name == 'nt':
+            os.system('cls')
+        else:
+            os.system('clear')
 
 # Define a method that plays a turn of the game
 
@@ -50,6 +58,8 @@ class CardMemoryGame:
         for card in dealt_cards:
             print(card)
             time.sleep(1)
+        self.clear_terminal()
+
 
 # Define a method that starts the game and displays instructions
 
