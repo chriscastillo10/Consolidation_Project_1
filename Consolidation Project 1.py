@@ -49,6 +49,26 @@ class CardMemoryGame:
         else:
             os.system('clear')
 
+# Define a method that asks the user to guess the cards that were dealt
+
+    def guess_the_cards(self, dealt_cards):
+        print("Now, guess the cards that were dealt.")
+        guessed_cards = []
+        for i in range(5):
+            suit = input(f"Guess the suit of card {i+1}: ")
+            rank = input(f"Guess the rank of card {i+1}: ")
+            guessed_cards.append((suit, rank))
+        
+        return guessed_cards
+
+# Define a method that chekcs the guessed cards against the dealt cards
+    def guess_check(self, dealt_cards, guessed_cards):
+        correct_guesses = 0
+        for i in range(5):
+            if guessed_cards[i] in dealt_cards:
+                correct_guesses += 1
+        
+        return correct_guesses
 # Define a method that plays a turn of the game
 
     def play_turn(self):
