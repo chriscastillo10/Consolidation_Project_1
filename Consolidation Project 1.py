@@ -61,7 +61,7 @@ class CardMemoryGame:
         
         return guessed_cards
 
-# Define a method that chekcs the guessed cards against the dealt cards
+# Define a method that checks the guessed cards against the dealt cards
     def guess_check(self, dealt_cards, guessed_cards):
         correct_guesses = 0
         for i in range(5):
@@ -69,6 +69,7 @@ class CardMemoryGame:
                 correct_guesses += 1
         
         return correct_guesses
+    
 # Define a method that plays a turn of the game
 
     def play_turn(self):
@@ -79,6 +80,11 @@ class CardMemoryGame:
             print(card)
             time.sleep(1)
         self.clear_terminal()
+
+        guessed_cards = self.guess_the_cards(dealt_cards)
+        correct_guesses = self.guess_check(dealt_cards, guessed_cards)
+        print(f"You guessed {correct_guesses} card correctly!")
+        return correct_guesses
 
 
 # Define a method that starts the game and displays instructions
